@@ -1,3 +1,5 @@
+const total= document.getElementById("total")
+const searchBtn=document.getElementById("search-btn")
 const fetchPromise=(selectValue)=>{
     // console.log(selectValue);
 fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
@@ -33,7 +35,8 @@ allBtn.addEventListener("click",(btn)=>{
 })
 function displayData(data){
     // console.log(data);
-    productContainer.innerHTML=""
+    productContainer.innerHTML="";
+    total.innerText = data.length
     data.forEach((allData) => {
     //   console.log(allData);
       const card = document.createElement("div");
@@ -60,3 +63,6 @@ function displayData(data){
       productContainer.appendChild(card);
     });
 }
+searchBtn.addEventListener("click",()=>{
+    console.log("search btn");
+})
