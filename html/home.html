@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- daisy ui + tailwind link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../style/index.css">
+    <!-- font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class=" bg-[#f8fafcFF]">
+    <nav class="navbar bg-base-100 shadow-sm flex justify-between items-center ">
+        <div class="flex gap-2">
+            <img class="h-8 w-8 rounded-full" src="../assets/github-logo.png" alt="">
+            <h1 class="font-semibold text-2xl">GitHub Issues Tracker</h1>
+        </div>
+        <div class="flex gap-3">
+            <label class="input">
+                <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
+                        stroke="currentColor">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                    </g>
+                </svg>
+                <input type="search" required placeholder="Search" />
+            </label>
+            <button class="btn btn-primary"> <i class="fa-solid fa-plus"></i>New Issue</button>
+        </div>
+    </nav>
+
+    <main class=" w-10/12 mx-auto  p-5 ">
+        <div id="btn-container" class=" bg-white shadow-2xl p-5 my-5">
+            <button id="all-btn" class="btn btn-primary px-5">all</button>
+            <button id="open" class="btn btn-primary px-5">open</button>
+            <button id="close-btn" class="btn btn-primary px-5">close</button>
+
+        </div>
+        <div class="bg-[#fbfbfbFF] ">
+            <div class=" bg-white flex justify-between items-center">
+                <div class="flex gap-4 p-5">
+                    <div class="h-[50px] w-[50px] flex rounded-full bg-[#ece4ffFF] justify-center items-center ">
+                        <img class="" src="../assets/Aperture.png" alt="">
+                    </div>
+                    <div>
+                        <h1 class="font-semibold text-2xl"><span>50</span>Issues</h1>
+                        <p class="text-[#64748bFF]">Track and manage your project issues</p>
+                    </div>
+                </div>
+                <div class="flex gap-5 mx-5 items-center justify-center">
+                    <div class="flex justify-center items-center gap-1">
+                        <p class="h-3 w-3 rounded-full bg-green-600"></p>
+                        <p>open</p>
+                    </div>
+                    <div class="flex justify-center items-center gap-1">
+                        <p class="h-3 w-3 rounded-full bg-[#a855f7FF]"></p>
+                        <p>closed</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <!--  card section -->
+            <div id="card-container" class="grid lg:grid-cols-4 sm:grid-cols-2 gap-5">
+                <div class="p-4 drop-shadow-2xl bg-white border-t-2 w-64  border-[#00a96eFF] rounded-xl">
+                    <div class="flex justify-between py-4">
+                        <img src="../assets/Open-Status.png" alt="">
+                        <p class="badge badge-soft badge-secondary ">HIGH</p>
+                    </div>
+                    <h1 class="font-semibold">Fix navigation menu on mobile devices</h1>
+                    <p class="text-[#64748bFF] py-2">The navigation menu doesn't collapse properly on mobile devices...</p>
+                    <div class="flex my-2 justify-between">
+                        <p class="badge badge-soft badge-secondary"><i class="fa-solid fa-bug"></i>BUG</p>
+                        <p class="badge badge-soft badge-warning"><i class="fa-solid fa-life-ring"></i>HELP WANTED</p>
+                    </div>
+                    <hr class="my-2">
+                    <p>#1 by john_doe</p>
+                    <p class="my-2">1/15/2024</p>
+                </div>
+
+            </div>
+
+
+        </div>
+    </main>
+    <script src="../javascript/home.js"></script>
+
+</body>
+
+</html>
